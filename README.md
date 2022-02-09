@@ -1,3 +1,11 @@
+# Tore jobber opp React frontend:
+- Router her; https://www.youtube.com/watch?v=0cSVuySEB0A&t=272s, se også prosjektet react-
+- Navbar fra bootstrap her; https://morioh.com/p/9bfffb706d01router-six
+- MS Identification here; https://docs.microsoft.com/en-us/azure/active-directory/develop/tutorial-v2-react
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
