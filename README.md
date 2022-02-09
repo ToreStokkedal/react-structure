@@ -3,12 +3,19 @@
 - Navbar fra bootstrap her; https://morioh.com/p/9bfffb706d01router-six
 - MS Identification here; https://docs.microsoft.com/en-us/azure/active-directory/develop/tutorial-v2-react
 
+# Status på fremdrift
+- Har fått opp grunnleggende struktur og navigering
+- Har fått opp autentisering til Azure AAD, og styrer Navigering (Menu) etter om den er restiricted eller ikke. Har fortsatt litt bugs, men virker
+- Neste er å kalle server side med Fetch, og håndtere manglende tilgang
+
 
 
 
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+
+T start run npm install, if not allready installed on your computer, project
 
 ## Available Scripts
 
