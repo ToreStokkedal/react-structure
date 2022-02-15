@@ -1,4 +1,3 @@
-import { Component } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useIsAuthenticated } from "@azure/msal-react";
@@ -19,8 +18,9 @@ export function Header (){
           <Nav.Link as={Link} to="/rooms">Rooms </Nav.Link>
           {isAuthenticated ? <Nav.Link as={Link} to="/menu">Menu</Nav.Link>: "Not authenticated"}
           </Nav>
+          {isAuthenticated ? <SignOutButton /> : <SignInButton />}
       </Container>
-      {isAuthenticated ? <SignOutButton /> : <SignInButton />}
+   
     </Navbar>
   )
 }

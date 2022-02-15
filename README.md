@@ -9,6 +9,17 @@
 - Neste er å kalle server side med Fetch, og håndtere manglende tilgang
 
 
+# Utfordringer løst
+
+## Cors, se linker;
+Når React prosjekt som kjører på localhost:3000 og bruker Quarkus prosjekt på localhost:8080 så får vi xsite scription feil...
+- https://www.youtube.com/watch?v=PNtFSVU-YTI
+- https://quarkus.io/guides/http-reference#cors-filter
+- Oppdaterte appplicaiton.properties i Jaca prossjektet løste det :-)
+
+## Feil på Webpack & polyfill
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+Fent ingen god grunn, starter på scratch i react-struct, feilsøkt og fant feilen. Hadde lagt til " import { response } from "express";" det var årsaken
 
 
 # Getting Started with Create React App
