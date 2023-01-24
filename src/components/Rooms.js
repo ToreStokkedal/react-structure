@@ -1,31 +1,38 @@
-import React from "react";
-import {Link, NavLink} from "react-router-dom";
-import { Container, Row } from 'react-bootstrap';
+import React, { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { Row } from 'react-bootstrap';
 
-const Rooms = (props) => {
+const Rooms = () => {
+    const [rooms, setRooms] = useState([])
 
-    const rooms = props.rooms.map((room) => {
-        return (
-            <Row> 
-               <NavLink as={Link} to={`/rooms/${room.id}`}><h4>{room.name} {room.description}</h4></NavLink>
-            </Row>
-        );
-    });
+    const fetchData = () => {
+        fetch("http://localhost:8080/rooms")
+            .then(response => {
+                return response.json()
+            })
+            .then(data => {
+                setRooms(data)
+            })
+    }
+
+
+    useEffect(() => {
+        fetchData()
+    }, [])
 
     return (
-        <Container>
-            {rooms}
-        </Container>
-    );
+
+        <div className="container">
+            {rooms.length > 0 && (
+                <ul>
+                    {rooms.map(room => (
+                        <li key={room.id}>{room.name}</li>
+                    ))}
+                </ul>
+            )}
+        </div>
+    )
 }
 
-/**export function RoomID(){
-    const { courseid } = useParams()
-    return (
-      <div>
-        <h4>URL Param is; {courseid} </h4>
-        <button className="btn btn-warning" >Price </button>
-      </div>
-    );
-*/
+
 export default Rooms;

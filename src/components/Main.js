@@ -25,15 +25,14 @@ class Main extends Component {
       rooms: ROOMS
     }
   }
+
   render() {
     return (
       <div>
         <Header />
-
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/rooms" element={<Rooms rooms={ROOMS}/>} >
-          </Route>
+          <Route path="/rooms" element={<Rooms />} />
           <Route path="/menu" element={<Menu />} />
         </Routes>
 
