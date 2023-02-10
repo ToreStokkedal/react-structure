@@ -11,6 +11,7 @@ export const SignInButton = () => {
     const { instance } = useMsal();
 
     const handleLogin = (loginType) => {
+        console.log("In handleLogin " + instance);
         if (loginType === "popup") {
             instance.loginPopup(loginRequest).catch(e => {
                 console.log(e);
@@ -22,7 +23,7 @@ export const SignInButton = () => {
         }
     }
     return (
-        <DropdownButton variant="secondary" className="ml-auto" drop="left" title="Sign In">
+        <DropdownButton variant="secondary" className="ml-auto" drop="down" title="Sign In">
             <Dropdown.Item as="button" onClick={() => handleLogin("popup")}>Sign in using Popup</Dropdown.Item>
             <Dropdown.Item as="button" onClick={() => handleLogin("redirect")}>Sign in using Redirect</Dropdown.Item>
         </DropdownButton>

@@ -22,7 +22,7 @@ export const SignOutButton = () => {
         }
     }
     return (
-        <DropdownButton variant="secondary" className="ml-auto" drop="left" title="Sign Out">
+        <DropdownButton variant="secondary" className="ml-auto" drop="down" title="Sign Out">
             <Dropdown.Item as="button" onClick={() => handleLogout("popup")}>Sign out using Popup</Dropdown.Item>
             <Dropdown.Item as="button" onClick={() => handleLogout("redirect")}>Sign out using Redirect</Dropdown.Item>
         </DropdownButton>

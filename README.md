@@ -5,8 +5,11 @@
 
 # Status på fremdrift
 - Har fått opp grunnleggende struktur og navigering
-- Har fått opp autentisering til Azure AAD, og styrer Navigering (Menu) etter om den er restiricted eller ikke. Har fortsatt litt bugs, men virker
-- Neste er å kalle server side med Fetch, og håndtere manglende tilgang
+- Har fått opp autentisering til Azure AAD, og styrer Navigering (Menu) etter om den er restiricted eller ikke. Login, logout virker med popup og redirect.
+- Er installer på static.stokkedal.net (dvs ikke siste version)
+- Neste er
+  - Å oppdatere Rooms med Fetch i Rooms, og 
+  - Håndtere manglende tilgang
 
 
 # Utfordringer løst
@@ -20,6 +23,8 @@ Når React prosjekt som kjører på localhost:3000 og bruker Quarkus prosjekt p�
 ## Feil på Webpack & polyfill
 BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
 Fent ingen god grunn, starter på scratch i react-struct, feilsøkt og fant feilen. Hadde lagt til " import { response } from "express";" det var årsaken
+
+## Login do not work on IP adress, must use localhost
 
 
 # Getting Started with Create React App
