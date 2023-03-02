@@ -16,6 +16,7 @@ export function Header (){
         <Nav className="me-auto">
           <Nav.Link as={Link} to="/">Home </Nav.Link>
           <Nav.Link as={Link} to="/rooms">Rooms </Nav.Link>
+          <Nav.Link as={Link} to="/play">Play with code </Nav.Link>
           {isAuthenticated ? <Nav.Link as={Link} to="/menu">Menu</Nav.Link>: "Not authenticated"}
           </Nav>
           {isAuthenticated ? <SignOutButton /> : <SignInButton />}

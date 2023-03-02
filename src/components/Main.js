@@ -11,6 +11,7 @@ import {
 import Header from './Header';
 import Home from './Home';
 import Rooms from './Rooms';
+import Play from './Play';
 import Menu from './Menu'
 import Footer from './Footer';
 import { ROOMS } from '../shared/rooms';
@@ -33,6 +34,7 @@ class Main extends Component {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/rooms" element={<Rooms />} />
+          <Route path="/play" element={<Play />} />
           <Route path="/menu" element={<Menu />} />
         </Routes>
 
