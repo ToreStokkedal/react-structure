@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 
-const RoomsList = () => {
-    const [rooms, setRooms] = useState([])
+const ApppliList = () => {
+    const [applications, setApplications] = useState([])
 
     const fetchData = () => {
         fetch("http://localhost:8080/rooms")
@@ -9,7 +9,7 @@ const RoomsList = () => {
                 return response.json()
             })
             .then(data => {
-                setRooms(data)
+                setApplicaitons(data)
             })
     }
 
@@ -18,8 +18,8 @@ const RoomsList = () => {
     }, [])
 
     return (
-        rooms
+        applications
     )
 }
 
-export default RoomsList
+export default AppplicationsList

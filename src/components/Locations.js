@@ -1,14 +1,14 @@
 import { Component } from "react";
 
-class Menu extends Component {
+class Locations extends Component {
 
     render() {
         return (
         <div className="container">
-            <h1> Menyen denne helgen</h1>
+            <h1> Her will the locaitons list be</h1>
         </div>
         )
     }
 }
 
-export default Menu;
+export default Locations;

@@ -8,21 +8,21 @@ import { SignOutButton } from "./SignOutButton";
 export function Header (){
 
   const isAuthenticated = useIsAuthenticated()
-
   return (
+    <div>
     <Navbar bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="/">Small Hotel</Navbar.Brand>
+        <Navbar.Brand href="/">Critical applications</Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link as={Link} to="/">Home </Nav.Link>
-          <Nav.Link as={Link} to="/rooms">Rooms </Nav.Link>
-          <Nav.Link as={Link} to="/play">Play with code </Nav.Link>
-          {isAuthenticated ? <Nav.Link as={Link} to="/menu">Menu</Nav.Link>: "Not authenticated"}
+          <Nav.Link as={Link} to="/applications">Applicaitions </Nav.Link>
+          <Nav.Link as={Link} to="/play">Play </Nav.Link>
+          {isAuthenticated ? <Nav.Link as={Link} to="/locations">Locations</Nav.Link>: "Not authenticated"}
           </Nav>
           {isAuthenticated ? <SignOutButton /> : <SignInButton />}
-      </Container>
-   
+      </Container>  
     </Navbar>
+    </div>
   )
 }
 

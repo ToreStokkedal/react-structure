@@ -8,8 +8,9 @@
 - Har fått opp autentisering til Azure AAD, og styrer Navigering (Menu) etter om den er restiricted eller ikke. Login, logout virker med popup og redirect.
 - Er installer på static.stokkedal.net (dvs ikke siste version)
 - Neste er
-  - Å oppdatere Rooms med Fetch i Rooms, og 
-  - Håndtere manglende tilgang
+  - Å skru om til "Critical applicaitons list" 
+  - Simpel fetch for applicaitons
+  - Then supporting data (ork, locaitons, data regions, SW)
 
 
 # Utfordringer løst

@@ -10,20 +10,20 @@ import {
 } from 'react-router-dom';
 import Header from './Header';
 import Home from './Home';
-import Rooms from './Rooms';
+import Applications from './Applications';
 import Play from './Play';
-import Menu from './Menu'
+import Locations from './Locations' 
 import Footer from './Footer';
-import { ROOMS } from '../shared/rooms';
+import { APPLICATIONS} from '../shared/applications';
 
 
 class Main extends Component {
-
+i
   constructor(props) {
     super(props);
 
     this.state = {
-      rooms: ROOMS
+      applicaitons: APPLICATIONS
     }
   }
 
@@ -31,13 +31,12 @@ class Main extends Component {
     return (
       <div>
         <Header />
-        <Routes>
+        <Routes>i
           <Route path="/" element={<Home />} />
-          <Route path="/rooms" element={<Rooms />} />
+          <Route path="/applications" element={<Applications />} />
           <Route path="/play" element={<Play />} />
-          <Route path="/menu" element={<Menu />} />
+          <Route path="/locations" element={<Locations/>} />
         </Routes>
-
         <Footer />
       </div>
     );
